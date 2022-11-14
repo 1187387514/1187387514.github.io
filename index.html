@@ -179,10 +179,45 @@
 <li>npm install -g cnpm –registry&#x3D;<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>	#安装淘宝的cnpm 管理器</li>
 <li>cnpm -v	#查看cnpm版本</li>
 </ul>
-<h5 id="hexo安装："><a href="#hexo安装：" class="headerlink" title="hexo安装："></a>hexo安装：</h5><ul>
+<h5 id="创建博客本地目录："><a href="#创建博客本地目录：" class="headerlink" title="创建博客本地目录："></a>创建博客本地目录：</h5><ul>
+<li>mkdir blog	#创建blog目录</li>
+<li>cd blog	 #进入blog目录</li>
+</ul>
+<h5 id="Github上创建博客仓库："><a href="#Github上创建博客仓库：" class="headerlink" title="Github上创建博客仓库："></a>Github上创建博客仓库：</h5><ul>
+<li>#Github创建一个新的仓库 YourGithubName.github.io</li>
+</ul>
+<h5 id="git安装："><a href="#git安装：" class="headerlink" title="git安装："></a>git安装：</h5><ul>
+<li>到git官网下载</li>
+<li>git config –global user.email “xxx” #设置邮箱</li>
+<li>git config –global user.name “xxx” #设置用户名</li>
+<li>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件</li>
+</ul>
+<h5 id="配置blog的配置文件："><a href="#配置blog的配置文件：" class="headerlink" title="配置blog的配置文件："></a>配置blog的配置文件：</h5><ul>
+<li><p>#配置_config.yml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">	## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">	deploy:</span><br><span class="line">  		type: git</span><br><span class="line"> 		repo: https://github.com/YourGithubName/YourGithubName.github.io.git</span><br><span class="line">  		branch: master</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="hexo安装与使用："><a href="#hexo安装与使用：" class="headerlink" title="hexo安装与使用："></a>hexo安装与使用：</h5><ul>
 <li><p>cnpm install -g hexo-cli    #安装hexo框架</p>
 </li>
+<li><p>hexo -v	#查看hexo版本</p>
+</li>
+<li><p>sudo hexo init 	#生成博客 初始化博客</p>
+</li>
+<li><p>hexo s	#启动本地博客服务</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>	#本地访问地址</p>
+</li>
+<li><p>hexo n “我的第一篇文章” #创建新的文章</p>
+</li>
+<li><p>使用编辑软件编辑文章</p>
+</li>
+<li><p>hexo clean #清理</p>
+</li>
+<li><p>hexo g #生成</p>
+</li>
 <li><p>hexo d 一键部署到github</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>  #访问这个地址可以查看博客</p>
 </li>
 <li><p>如果部署到github的时候报Support for password authentication was removed，意味着git客户端版本太低，解决方案如下：</p>
 </li>
@@ -201,10 +236,13 @@
 </ol>
 </li>
 </ul>
-<h5 id="git安装："><a href="#git安装：" class="headerlink" title="git安装："></a>git安装：</h5><ul>
-<li>到git官网下载</li>
-<li>git config –global user.email “xxx” #设置邮箱</li>
-<li>git config –global user.name “xxx” #设置用户名</li>
+<h5 id="更新主题（以yilia为例）"><a href="#更新主题（以yilia为例）" class="headerlink" title="更新主题（以yilia为例）"></a>更新主题（以yilia为例）</h5><ul>
+<li>git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes&#x2F;yilia  #下载yilia主题到本地</li>
+<li>修改hexo根目录下的 _config.yml 文件 ： theme: yilia</li>
+<li>hexo c	#清理一下</li>
+<li>hexo g	#生成</li>
+<li>hexo d	#部署到远程Github仓库</li>
+<li><a target="_blank" rel="noopener" href="https://yourgithubname.github.io/">https://YourGithubName.github.io/</a>  #查看博客</li>
 </ul>
 
       
